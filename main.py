@@ -31,7 +31,7 @@ logging.basicConfig(
 
 async def copy_channel_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     """
-    Kanaldan gelen mesajı yakalar ve hedefe kopyalar.
+  
     """
     try:
         # Eğer hedef grup ID'si girilmemişse işlem yapma
@@ -42,7 +42,7 @@ async def copy_channel_message(update: Update, context: ContextTypes.DEFAULT_TYP
         chat_id = update.effective_chat.id
         message_id = update.effective_message.id
         
-        print(f"Kanaldan mesaj geldi: {message_id}")
+        print(f" {message_id}")
 
         # Mesajı kopyala (İletildi etiketi olmadan)
         await context.bot.copy_message(
@@ -50,7 +50,7 @@ async def copy_channel_message(update: Update, context: ContextTypes.DEFAULT_TYP
             from_chat_id=chat_id,
             message_id=message_id
         )
-        print("Mesaj başarıyla kopyalandı.")
+        print(".")
 
     except Exception as e:
         print(f"Kopyalama hatası: {e}")
